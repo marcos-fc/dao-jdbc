@@ -14,6 +14,12 @@ public class AppTest2 {
 		Department newDepartment = new Department(null,"Music");
 		departmentDao.insert(newDepartment);
 		System.out.println("Inserted! new id = " + newDepartment.getId());
+		
+		System.out.println("\n#### TEST 5: seller sellerUpdate ####");
+		Department department = departmentDao.findById(4);
+		department.setName("Corrida");
+		departmentDao.update(department);
+		System.out.println("Update completed");
 	}
 
 }
