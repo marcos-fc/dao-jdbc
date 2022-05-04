@@ -15,11 +15,15 @@ public class AppTest2 {
 		departmentDao.insert(newDepartment);
 		System.out.println("Inserted! new id = " + newDepartment.getId());
 		
-		System.out.println("\n#### TEST 5: seller sellerUpdate ####");
+		System.out.println("\n#### TEST 2: seller sellerUpdate ####");
 		Department department = departmentDao.findById(4);
 		department.setName("Corrida");
 		departmentDao.update(department);
 		System.out.println("Update completed");
+		
+		System.out.println("\n#### TEST 3: seller findById ####");
+		department = departmentDao.findById(3);		
+		System.out.println(department);
 	}
 
 }
